@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.example.prakash.RetreatServicedApartment.activity.RoundRectCornerImageView
+                android:id="@+id/event_image"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_landingpage_buttom"
+                android:layout_marginLeft="@dimen/margin_on_landingpage"
+                android:layout_marginRight="@dimen/margin_on_landingpage"
+                android:layout_marginTop="@dimen/margin_landingpage_buttom"
+                android:scaleType="centerCrop"
+
+                android:src="@drawable/apartmentpic" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_landingpage_buttom"
+                android:layout_marginLeft="@dimen/margin_on_landingpage"
+                android:layout_marginRight="@dimen/margin_on_landingpage"
+                android:layout_marginTop="@dimen/margin_landingpage_buttom"
+                android:background="@drawable/landingpageradious"></LinearLayout>
+
+            <TextView
+                android:textAllCaps="true"
+                android:id="@+id/event_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/landing_text_margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_landingpage"
+                android:text="First thext"
+                android:textStyle="bold" />
+            <TextView
+                android:textAllCaps="true"
+                android:id="@+id/event_date"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+               android:layout_gravity="bottom"
+                android:text="hellos"
+                android:layout_margin="@dimen/landing_text_margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_landingpage"
+                 />
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

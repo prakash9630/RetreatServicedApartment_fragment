@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+android:layout_marginTop="10dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"  android:layout_height="wrap_content"
+        android:background="#ccc"
+        android:paddingTop="1dp"
+        android:shrinkColumns="0"
+
+        android:stretchColumns="0"
+        android:id="@+id/tlTable01">
+
+        <TableRow
+
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp">
+
+
+            <TextView
+                android:background="@color/transparent"
+
+                android:id="@+id/order_number"
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+
+                android:text="ORDER NUMBER"/>
+            <TextView
+                android:id="@+id/order_no"
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="@color/transparent"
+                android:gravity="right"
+                />
+
+
+        </TableRow>
+
+        <TableRow
+            android:paddingBottom="1dp"
+
+            android:paddingRight="1dp">
+            <TextView
+                android:background="@color/transparent"
+
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:text="CREATED"/>
+            <TextView
+                android:background="@color/transparent"
+
+                android:id="@+id/created_id"
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:singleLine="false"
+                android:inputType="textMultiLine"
+                android:gravity="right"
+             />
+        </TableRow>
+
+
+        <TableRow
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp">
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="@color/transparent"
+
+                android:text="UPDATE DATE"/>
+            <TextView
+                android:id="@+id/updated_id"
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="@color/transparent"
+                android:gravity="right"
+             />
+        </TableRow>
+
+        <TableRow
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp">
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="@color/transparent"
+
+                android:text="TOTAL"/>
+            <TextView
+                android:id="@+id/total_id"
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="@color/transparent"
+                android:gravity="right"
+               />
+        </TableRow>
+
+        <TableRow
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp">
+            <TextView
+                android:background="@color/transparent"
+
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:text="ORDER STATUS"/>
+            <TextView
+                android:id="@+id/order_status_id"
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="@color/transparent"
+
+                android:gravity="right"
+                />
+        </TableRow>
+
+
+
+
+    </TableLayout>
+
+    <Button
+
+        android:id="@+id/single_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="View" />
+
+
+</LinearLayout>

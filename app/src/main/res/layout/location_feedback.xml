@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:text="Reason for sending location"/>
+
+
+
+    <EditText
+        android:textCursorDrawable="@null"
+        android:textSize="15dp"
+        android:background="@drawable/feedback_shape"
+
+        android:layout_marginBottom="20dp"
+
+        android:id="@+id/send_location_edittext"
+        android:layout_width="match_parent"
+        android:hint="Message here"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:padding="10dp"
+        android:layout_height="200dp" />
+
+    <Button
+        android:id="@+id/send_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/primarybuttoncolor"
+        android:textColor="@color/white"
+        android:text="Send"/>
+
+
+
+</LinearLayout>

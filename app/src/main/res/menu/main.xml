@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <group
+        android:orderInCategory="100"
+        app:showAsAction="always">
+
+        <item
+            android:id="@+id/action_phone"
+            android:icon="@drawable/ic_call_btn"
+            android:orderInCategory="101"
+            android:title="Ratings"
+            app:showAsAction="always" />
+
+
+    </group>
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="101"
+        android:icon="@drawable/ratings"
+        android:title="Ratings"
+        app:showAsAction="always" />
+</menu>

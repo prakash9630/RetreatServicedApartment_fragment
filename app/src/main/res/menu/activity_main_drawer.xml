@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+    <item android:title="YOU ARE LOGGED IN">
+        <menu>
+
+
+
+
+            <item
+                android:id="@+id/nav_order"
+                android:icon="@drawable/icon_userorder"
+                android:title="Users Order" />
+
+
+
+
+        </menu>
+    </item>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_login"
+            android:icon="@drawable/icon_login"
+            android:title="Users Login" />
+
+        <item
+            android:id="@+id/nav_book"
+            android:icon="@drawable/icon_booknow"
+            android:title="Book now" />
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/icon_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_apartment"
+            android:icon="@drawable/icon_apartment"
+            android:title="Apartments" />
+
+        <item
+            android:id="@+id/nav_aboutus"
+            android:icon="@drawable/icon_aboutus"
+            android:title="About us" />
+        <item
+            android:id="@+id/nav_facilities"
+            android:icon="@drawable/icon_facilities"
+            android:title="Facilities" />
+        <item
+            android:id="@+id/nav_locaiton"
+            android:icon="@drawable/icon_location"
+            android:title="Location" />
+
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/icon_gallery"
+            android:title="Gallery" />
+        <item
+            android:id="@+id/nav_contactus"
+            android:icon="@drawable/icon_contact"
+            android:title="Contact us" />
+        <item
+            android:id="@+id/nav_travels"
+            android:icon="@drawable/icon_travel"
+            android:title="Travells" />
+        <item
+            android:id="@+id/nav_videos"
+            android:icon="@drawable/icon_video"
+            android:title="Videos" />
+        <item
+            android:id="@+id/nav_event"
+            android:icon="@drawable/icon_feedback"
+            android:title="Events" />
+
+        <item
+            android:id="@+id/nav_qrscanner"
+            android:icon="@drawable/ic_qrscanner"
+            android:title="QRScanner" />
+
+        <item
+            android:id="@+id/nav_website"
+            android:icon="@drawable/icon_web"
+            android:title="Kathmandu Gallery" />
+
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/icon_feedback"
+            android:title="Feedback" />
+
+
+    </group>
+
+
+
+</menu>

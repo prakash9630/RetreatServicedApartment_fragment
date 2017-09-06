@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "8189965465",
+    "firebase_url": "https://new-apartment-template.firebaseio.com",
+    "project_id": "new-apartment-template",
+    "storage_bucket": "new-apartment-template.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8189965465:android:95eda9f9519ebe44",
+        "android_client_info": {
+          "package_name": "com.example.prakash.RetreatServicedApartment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8189965465-4plr64urfbfb6un8gug2pueocic001uj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBznWQaiPE9ACF1E85RP7iz9S_6ixg3iZc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:layout_margin="10dp">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:background="@drawable/cell_order_unit"
+android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:text="Unit type :"
+        android:textStyle="bold"
+
+
+
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:padding="5dp"
+
+        android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+
+<TextView
+    android:padding="5dp"
+    android:inputType="textMultiLine"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/order_unit"
+    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+
+
+</LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/cell_order_unit"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Quantity  :"
+            android:textStyle="bold"
+
+
+            android:layout_width="wrap_content"
+            android:inputType="textMultiLine"
+            android:layout_height="wrap_content"
+
+            android:padding="5dp"
+
+            android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+
+
+
+    <TextView
+        android:inputType="textMultiLine"
+
+
+        android:id="@+id/order_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="5dp"
+
+        android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+
+
+    </LinearLayout>
+</LinearLayout>
