@@ -7,7 +7,10 @@
     <bool name="ga_autoActivityTracking">true</bool>
 
     <!--  The property id associated with this analytics tracker -->
-    <string name="ga_trackingId">UA-98370994-1</string>
+    <string name="ga_trackingId">UA-54804267-1</string>
+
+
+    <!--UA-98370994-1==for dynamic apartment-->
 
     <string name="ga_sampleFrequency">100.0</string>
 

@@ -35,6 +35,7 @@ import com.androidadvance.topsnackbar.TSnackbar;
 import com.example.prakash.RetreatServicedApartment.Pojo.Testimonial_data;
 import com.example.prakash.RetreatServicedApartment.Public_Url;
 import com.example.prakash.RetreatServicedApartment.R;
+import com.example.prakash.RetreatServicedApartment.app.MyApplication;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -168,6 +169,15 @@ public class Testimonials extends Fragment {
             return false;
         }
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        // Tracking the screen view
+        MyApplication.getInstance().trackScreenView("Testimonials");
+    }
+
 }
 class TestimonialAdapter extends RecyclerView.Adapter<TestimonialHolder>
 {

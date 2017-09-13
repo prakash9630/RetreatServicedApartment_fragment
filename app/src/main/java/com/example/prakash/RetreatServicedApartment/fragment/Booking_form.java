@@ -217,30 +217,6 @@ public class Booking_form extends Fragment {
                 }
 
 
-//                else {
-//
-//                    try {
-//                        long timeInMilliseconds = 0;
-//
-//                        Date currentDepDate = formatter.parse(mDeparture.getText().toString());
-//
-//                        Date startingDate = formatter.parse(mArrive.getText().toString());
-//                        timeInMilliseconds = startingDate.getTime();
-//
-//                        if(currentDepDate.before(startingDate)){
-//                            long selecteddate=timeInMilliseconds + 86400000;
-//                            departurebtn.setEnabled(true);
-//
-//                            mDeparture.setText(formatter.format(selecteddate));
-//                        }
-//                    }
-//                    catch (Exception e){
-//                        e.printStackTrace();
-//                    }
-//
-//                    // if departure date < arrival date then change date
-//                }
-
 
 
 

@@ -30,6 +30,7 @@ import com.example.prakash.RetreatServicedApartment.Pojo.Place_data;
 import com.example.prakash.RetreatServicedApartment.Public_Url;
 import com.example.prakash.RetreatServicedApartment.R;
 import com.example.prakash.RetreatServicedApartment.activity.Place_detail;
+import com.example.prakash.RetreatServicedApartment.app.MyApplication;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -176,6 +177,15 @@ public class Restaurant_activity extends Fragment {
         RequestQueue queue = Volley.newRequestQueue(getContext());
         queue.add(request);
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        // Tracking the screen view
+        MyApplication.getInstance().trackScreenView("Resturants");
+    }
+
 
 }
 

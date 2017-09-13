@@ -26,6 +26,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.prakash.RetreatServicedApartment.Pojo.Place_data;
 import com.example.prakash.RetreatServicedApartment.Public_Url;
 import com.example.prakash.RetreatServicedApartment.R;
+import com.example.prakash.RetreatServicedApartment.app.MyApplication;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -183,6 +184,13 @@ recyclerView=(RecyclerView)mainView.findViewById(R.id.cultural_recyclerview);
         }
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        // Tracking the screen view
+        MyApplication.getInstance().trackScreenView("Landmarks");
+    }
 
 }
 

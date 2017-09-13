@@ -37,6 +37,7 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.prakash.RetreatServicedApartment.Pojo.Available_rooms_getter;
 import com.example.prakash.RetreatServicedApartment.R;
+import com.example.prakash.RetreatServicedApartment.app.MyApplication;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -115,7 +116,7 @@ public class AvailableRooms extends Fragment
                 + unit2 + "&" + "rooms_group_size3="
                 + unit3;
 
-        url = "http://demo.nuza.solutions/androidapi/v1/app_availability_search/" + start + "/" + end + "/"
+        url = "https://www.retreatservicedapartments.com/androidapi/v1/app_availability_search/" + start + "/" + end + "/"
                 + unit + parameterString;
 
 
@@ -269,6 +270,13 @@ public class AvailableRooms extends Fragment
 
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        // Tracking the screen view
+        MyApplication.getInstance().trackScreenView("Available rooms");
+    }
 
 
 }

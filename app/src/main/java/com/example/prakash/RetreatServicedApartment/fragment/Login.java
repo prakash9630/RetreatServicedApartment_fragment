@@ -289,7 +289,7 @@ loginbtn=(Button)mainView.findViewById(R.id.sign_in_button);
         super.onResume();
 
         // Tracking the screen view
-        MyApplication.getInstance().trackScreenView("Restaurants");
+        MyApplication.getInstance().trackScreenView("Login form");
     }
 
 }

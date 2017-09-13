@@ -26,6 +26,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.prakash.RetreatServicedApartment.Public_Url;
 import com.example.prakash.RetreatServicedApartment.R;
 import com.example.prakash.RetreatServicedApartment.activity.MainActivity;
+import com.example.prakash.RetreatServicedApartment.app.MyApplication;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -278,4 +279,13 @@ public class CompletPaymet extends AppCompatActivity {
     public void onBackPressed() {
 
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        // Tracking the screen view
+        MyApplication.getInstance().trackScreenView("Complet payment");
+    }
+
 }

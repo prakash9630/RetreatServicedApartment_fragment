@@ -30,6 +30,7 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.example.prakash.RetreatServicedApartment.Public_Url;
 import com.example.prakash.RetreatServicedApartment.R;
+import com.example.prakash.RetreatServicedApartment.app.MyApplication;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -65,6 +66,9 @@ public class Event_detail extends Fragment {
         time=(TextView)mainView.findViewById(R.id.event_time);
         sliderShow=(SliderLayout)mainView.findViewById(R.id.slider_event);
 
+
+
+
         pDilog = ProgressDialog.show(getActivity(), null, null, true);
         pDilog.setContentView(R.layout.apartment_layout);
         pDilog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
@@ -86,7 +90,7 @@ getData();
     void getData()
     {
 
-        JsonObjectRequest request=new JsonObjectRequest(url+nid,null, new Response.Listener<JSONObject>() {
+        JsonObjectRequest request=new JsonObjectRequest(url+nid,null,new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
 
@@ -246,4 +250,13 @@ getData();
             return false;
         }
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        // Tracking the screen view
+        MyApplication.getInstance().trackScreenView("Event detail");
+    }
+
 }

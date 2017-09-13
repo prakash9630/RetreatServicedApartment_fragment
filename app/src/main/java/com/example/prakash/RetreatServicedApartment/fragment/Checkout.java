@@ -33,6 +33,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.prakash.RetreatServicedApartment.Public_Url;
 import com.example.prakash.RetreatServicedApartment.R;
+import com.example.prakash.RetreatServicedApartment.app.MyApplication;
 import com.paypal.android.sdk.payments.PayPalConfiguration;
 import com.paypal.android.sdk.payments.PayPalPayment;
 import com.paypal.android.sdk.payments.PayPalService;
@@ -85,8 +86,8 @@ public class Checkout extends Fragment {
     ArrayList<String> countries = new ArrayList<String>();
 
     PayPalConfiguration m_configuration;
-//    String mClintId="AbMfQTit8DAiwk_VUgJUJFHPtbTRWi5s-vanrqcI1ruXbfwDEmu3ysYk9UyVTLCB2bVBqp7ljP37zZAZ";    // this is for live account
-        String mClintId="AbMfQTit8DAiwk_VUgJUJFHPtbTRWi5s-vanrqcI1ruXbfwDEmu3ysYk9UyVTLCB2bVBqp7ljP37zZAZ";  //this is sandbox account
+    String mClintId="AZgk2hCu3i968ZBiuXHzPgabxExbdxbeO2q5U4cWObpzMdIb8qgVAlV3CKAT";    // this is for live account
+//        String mClintId="AbMfQTit8DAiwk_VUgJUJFHPtbTRWi5s-vanrqcI1ruXbfwDEmu3ysYk9UyVTLCB2bVBqp7ljP37zZAZ";  //this is sandbox account
     Intent mServices;
     int m_paypalRequestCode=1;
 
@@ -118,7 +119,7 @@ public class Checkout extends Fragment {
 
 
         m_configuration=new PayPalConfiguration()
-                .environment(PayPalConfiguration.ENVIRONMENT_SANDBOX)
+                .environment(PayPalConfiguration.ENVIRONMENT_PRODUCTION)
                 .clientId(mClintId);
         mServices=new Intent(getContext(), PayPalService.class);
         mServices.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION,m_configuration);
@@ -420,6 +421,13 @@ public class Checkout extends Fragment {
         startActivityForResult(intent,m_paypalRequestCode);
 
 
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        // Tracking the screen view
+        MyApplication.getInstance().trackScreenView("Form for creating order");
     }
 
 

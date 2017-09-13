@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 import android.webkit.WebView;
 import android.widget.FrameLayout;
@@ -61,7 +62,7 @@ public class Apartment_detail extends Fragment {
     String pish = "<html><head><style type=\"text/css\">@font-face {font-family: 'Raleway';" +
             "src: url(\"file:///android_asset/fonts/Raleway-ExtraLight.ttf\")}body {font-family: 'Raleway';font-size: medium;text-align: justify;}</style></head><body>";
     String pas = "</body></html>";
-    SliderLayout imgSlider;
+
     FrameLayout frame;
 ProgressDialog pDilog;
     LinearLayout booknow;
@@ -74,7 +75,6 @@ ProgressDialog pDilog;
 
 
 
-        imgSlider=(SliderLayout)mainView.findViewById(R.id.slider_apartmetn);
         sliderShow=(SliderLayout)mainView.findViewById(R.id.slider_apartmetn);
         booknow=(LinearLayout)mainView.findViewById(R.id.booklinear);
 
@@ -92,13 +92,12 @@ ProgressDialog pDilog;
         mBody=(WebView)mainView.findViewById(R.id.body_room);
         mBody.setBackgroundColor(Color.parseColor("#00000000"));
 
-        imgSlider=(SliderLayout)mainView.findViewById(R.id.slider_apartmetn);
+
 
 
 
         id=getArguments().getString("nid");
         machinename=getArguments().getString("machinename");
-
 
 
 

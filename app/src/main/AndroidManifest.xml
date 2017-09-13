@@ -123,11 +123,21 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value=
+                "@string/google_maps_key" />
 
         <activity
             android:name=".activity.Location_activity"
             android:label="@string/title_activity_location_activity"></activity>
+
+        <activity android:name=".Firebase.NewsNotification">
+
+            <intent-filter>
+                <action android:name=".Firebase.NewsNotification" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.prakash.RetreatServicedApartment.R;
+import com.example.prakash.RetreatServicedApartment.app.MyApplication;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
@@ -56,5 +57,13 @@ public class Video_fragment extends Fragment {
         youTubePlayerView.initialize("AIzaSyBeKUrS0KSQK_70qLRLHo7Nk2zm40-xNzA",onInitializedListener);
 
         return mainView;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        // Tracking the screen view
+        MyApplication.getInstance().trackScreenView("Youtube video");
     }
 }

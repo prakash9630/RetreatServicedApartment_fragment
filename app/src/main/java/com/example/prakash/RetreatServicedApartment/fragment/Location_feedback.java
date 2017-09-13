@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.example.prakash.RetreatServicedApartment.Helper.GPSTracker;
 import com.example.prakash.RetreatServicedApartment.R;
+import com.example.prakash.RetreatServicedApartment.app.MyApplication;
 
 /**
  * Created by prakash on 8/1/2017.
@@ -144,4 +145,13 @@ getLatLong();
             return false;
         }
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        // Tracking the screen view
+        MyApplication.getInstance().trackScreenView("Location feedback");
+    }
+
 }

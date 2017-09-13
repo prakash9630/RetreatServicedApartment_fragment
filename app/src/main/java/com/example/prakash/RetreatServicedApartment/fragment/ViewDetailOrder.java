@@ -196,7 +196,7 @@ pDilog.dismiss();
         super.onResume();
 
         // Tracking the screen view
-        MyApplication.getInstance().trackScreenView("Detail order");
+        MyApplication.getInstance().trackScreenView("Order detail");
     }
 }
 

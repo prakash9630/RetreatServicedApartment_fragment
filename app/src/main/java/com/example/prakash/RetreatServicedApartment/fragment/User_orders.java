@@ -181,13 +181,7 @@ Location_feedback feedback=new Location_feedback();
     }
 
 
-    @Override
-    public void onResume() {
-        super.onResume();
 
-        // Tracking the screen view
-        MyApplication.getInstance().trackScreenView("User order");
-    }
 
     void getData() {
 
@@ -267,6 +261,13 @@ pDilog.dismiss();
 
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        // Tracking the screen view
+        MyApplication.getInstance().trackScreenView("User order");
+    }
 }
 
 class OrderAdapter extends RecyclerView.Adapter<OrderHolder> {

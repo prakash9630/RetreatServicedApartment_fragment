@@ -28,6 +28,7 @@ import com.example.prakash.RetreatServicedApartment.Pojo.VideoData;
 import com.example.prakash.RetreatServicedApartment.Public_Url;
 import com.example.prakash.RetreatServicedApartment.R;
 import com.example.prakash.RetreatServicedApartment.activity.Videos;
+import com.example.prakash.RetreatServicedApartment.app.MyApplication;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -138,6 +139,13 @@ public class Video_list extends Fragment {
         } else {
             return false;
         }
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        // Tracking the screen view
+        MyApplication.getInstance().trackScreenView("Video list");
     }
 }
 

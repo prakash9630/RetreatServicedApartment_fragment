@@ -32,7 +32,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.androidadvance.topsnackbar.TSnackbar;
 import com.daimajia.slider.library.SliderLayout;
-import com.daimajia.slider.library.SliderTypes.BaseSliderView;
+
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.example.prakash.RetreatServicedApartment.Data.Channel;
 import com.example.prakash.RetreatServicedApartment.Data.Item;
@@ -94,6 +94,7 @@ public class Dashboard extends android.support.v4.app.Fragment implements Weathe
 
 
         Log.e("token id:",""+FirebaseInstanceId.getInstance().getToken());
+
 
         RegisterToken();
 

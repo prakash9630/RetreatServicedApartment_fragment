@@ -30,6 +30,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.prakash.RetreatServicedApartment.Pojo.Event_data;
 import com.example.prakash.RetreatServicedApartment.Public_Url;
 import com.example.prakash.RetreatServicedApartment.R;
+import com.example.prakash.RetreatServicedApartment.app.MyApplication;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -170,6 +171,14 @@ mainView=inflater.inflate(R.layout.events_layout,container,false);
             return false;
         }
     }
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        // Tracking the screen view
+        MyApplication.getInstance().trackScreenView("Events");
+    }
+
 }
 
 class EventAdapter extends RecyclerView.Adapter<EventHolder>

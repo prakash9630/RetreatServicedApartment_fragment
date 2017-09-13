@@ -36,11 +36,11 @@ public class Public_Url {
 
 
     public static String Orderapi="https://www.retreatservicedapartments.com/androidapi/v1/app_customer_profile";
+//    public static String Orderapi="http://template.nuza.solutions/androidapi/v1/app_customer_profile";
 
     public static  String completCheckout="https://www.retreatservicedapartments.com/androidapi/v1/app_checkout_complete";
 
-
-
+//    public static  String completCheckout="http://template.nuza.solutions/androidapi/v1/app_checkout_complete";
 
 
 }

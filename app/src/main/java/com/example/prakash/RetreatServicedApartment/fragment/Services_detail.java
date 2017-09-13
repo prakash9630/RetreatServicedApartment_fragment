@@ -15,8 +15,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 import android.webkit.WebView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -30,6 +32,7 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.example.prakash.RetreatServicedApartment.Public_Url;
 import com.example.prakash.RetreatServicedApartment.R;
+import com.example.prakash.RetreatServicedApartment.app.MyApplication;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -79,6 +82,18 @@ public class Services_detail extends Fragment {
 
 
 //        nid=getArguments().getString("nid");
+
+        ViewTreeObserver vot=sliderShow.getViewTreeObserver();
+        vot.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                sliderShow.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                int width  = sliderShow.getMeasuredWidth();
+                LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) sliderShow.getLayoutParams();
+                params.height = width;
+                sliderShow.setLayoutParams(params);
+            }
+        });
 
 
 
@@ -199,4 +214,13 @@ public class Services_detail extends Fragment {
             return false;
         }
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        // Tracking the screen view
+        MyApplication.getInstance().trackScreenView("Services detail");
+    }
+
 }
