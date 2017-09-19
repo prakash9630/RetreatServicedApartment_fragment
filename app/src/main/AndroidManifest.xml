@@ -130,13 +130,17 @@
             android:name=".activity.Location_activity"
             android:label="@string/title_activity_location_activity"></activity>
 
-        <activity android:name=".Firebase.NewsNotification">
+        <activity android:name=".activity.NewsNotification">
 
             <intent-filter>
-                <action android:name=".Firebase.NewsNotification" />
+                <action android:name="Notification" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.prakash.RetreatServicedApartment.activity.MainActivity" />
         </activity>
     </application>
 

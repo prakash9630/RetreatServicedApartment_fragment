@@ -354,6 +354,11 @@ final FragmentManager fragmentmanager=getSupportFragmentManager();
             startActivity(i);
 
         }
+
+        else if (id == R.id.nav_notification) {
+            Intent i=new Intent(MainActivity.this,NewsNotification.class);
+            startActivity(i);
+        }
         else if (id==R.id.nav_website)
         {
             toolbar.setTitle("Kathmandu gallery");

@@ -21,13 +21,21 @@
 
 
             <TextView
-                android:text="Retreat apartment"
-                android:textStyle="bold"
-                android:id="@+id/notification_title"
+                android:textStyle="italic"
+                android:textSize="12dp"
+                android:paddingTop="3dp"
+
+                android:id="@+id/notification_time"
+                android:text="Please update your app"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
+
             <TextView
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:textStyle="bold"
+                android:textSize="15dp"
                 android:id="@+id/notification_text"
                 android:text="Please update your app"
                 android:layout_width="wrap_content"

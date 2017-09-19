@@ -63,6 +63,10 @@
             android:icon="@drawable/icon_contact"
             android:title="Contact us" />
         <item
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/icon_notification"
+            android:title="Notifications" />
+        <item
             android:id="@+id/nav_travels"
             android:icon="@drawable/icon_travel"
             android:title="Travells" />

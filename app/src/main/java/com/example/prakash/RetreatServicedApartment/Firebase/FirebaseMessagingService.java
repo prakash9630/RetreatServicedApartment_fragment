@@ -9,6 +9,7 @@ import android.support.v4.app.NotificationCompat;
 import android.text.Html;
 
 import com.example.prakash.RetreatServicedApartment.R;
+import com.example.prakash.RetreatServicedApartment.activity.NewsNotification;
 import com.google.firebase.messaging.RemoteMessage;
 
 

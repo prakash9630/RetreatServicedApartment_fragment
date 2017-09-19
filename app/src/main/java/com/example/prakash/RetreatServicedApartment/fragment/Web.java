@@ -73,10 +73,20 @@ public class Web extends Fragment {
             @Override
             public void onPageFinished(WebView view, String url)
             {
-
+                webView.loadUrl("javascript:(function() { " +
+                        "document.getElementsByClassName('mainNavigationWrapper')[0].style.display='none'; " +
+                        "document.getElementsByClassName('breadcrumbContainer')[0].style.display='none'; " +
+                        "document.getElementsByClassName('footerWrapper')[0].style.display='none'; " +
+                        "document.getElementsByClassName('sideAds')[0].style.display='none'; " +
+                        "})()");
 
             }
+
+
         });
+
+
+
 
 
         webView.setWebChromeClient(new WebChromeClient() {

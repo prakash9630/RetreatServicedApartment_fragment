@@ -42,5 +42,5 @@ public class Public_Url {
 
 //    public static  String completCheckout="http://template.nuza.solutions/androidapi/v1/app_checkout_complete";
 
-
+public static String notifications="https://www.retreatservicedapartments.com/androidapi/v1/fcm_extension/all";
 }

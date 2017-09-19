@@ -304,9 +304,9 @@ class AwardAdapter extends RecyclerView.Adapter<AwardHolder>
 
         Picasso.with(context)
                 .load(current.getImage())
-//                .placeholder(R.drawable.defult)   // optional
-//                .error(R.drawable.defult)      // optional
-//                .resize(290,290)
+                .placeholder(R.drawable.defult)   // optional
+                .error(R.drawable.defult)      // optional
+                .resize(380,350)
                 .into(holder.image);
 
         holder.name.setText(current.getAward());
