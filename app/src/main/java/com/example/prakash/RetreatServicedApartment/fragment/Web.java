@@ -88,7 +88,6 @@ public class Web extends Fragment {
 
 
 
-
         webView.setWebChromeClient(new WebChromeClient() {
 //            private ProgressDialog mProgress;
 

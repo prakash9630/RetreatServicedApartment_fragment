@@ -52,21 +52,25 @@ ProgressBar pBar;
 //        anim.setDuration(2000);
 //        anim.start();
 
-        if (isOnline()) {
-            getCurrentVersion();
-            new GetLatestVersion().execute();
 
 
-        } else {
+        mainPage();
 
-
-            mainPage();
-
-
-
-
-
-        }
+//        if (isOnline()) {
+//            getCurrentVersion();
+//            new GetLatestVersion().execute();
+//
+//
+//        } else {
+//
+//
+//            mainPage();
+//
+//
+//
+//
+//
+//        }
 
 
     }
@@ -87,158 +91,154 @@ ProgressBar pBar;
     }
 
 
-    protected boolean isOnline() {
-        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        if (netInfo != null && netInfo.isConnected()) {
-
-
-            return true;
-        }
-
-
-        else {
-            return false;
-        }
-    }
-
-
-    private void getCurrentVersion() {
-        PackageManager pm = this.getPackageManager();
-        PackageInfo pInfo = null;
-
-        try {
-            pInfo = pm.getPackageInfo(this.getPackageName(), 0);
-
-
-
-
-
-        } catch (PackageManager.NameNotFoundException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-
-
-
-        }
-        currentVersion = pInfo.versionName;
-
-
-
-
-
-    }
-
-    private class GetLatestVersion extends AsyncTask<String, String, JSONObject> {
-
-        private ProgressDialog progressDialog;
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-        }
-
-
-        @Override
-        protected JSONObject doInBackground(String... params) {
-
-
-
-
-            try {
-
-
-
-
-
-
-//It retrieves the latest version by scraping the content of current version from play store at runtime
-                Document doc = Jsoup.connect("https://play.google.com/store/apps/details?id=project.revision.tap.retre").get();
-                latestVersion = doc.getElementsByAttributeValue
-                        ("itemprop", "softwareVersion").first().text();
-
-            } catch (Exception e) {
-                e.printStackTrace();
-
-
-
-
-
-
-            }
-
-
-            return new JSONObject();
-
-
-
-
-        }
-
-        @Override
-        protected void onPostExecute(JSONObject jsonObject) {
-
-
-
-            if (latestVersion != null) {
-                if (!currentVersion.equalsIgnoreCase(latestVersion)) {
-                    if (!isFinishing()) { //This would help to prevent Error : BinderProxy@45d459c0 is not valid; is your activity running? error
-                        showUpdateDialog();
-                        pBar.setVisibility(View.GONE);
-                    }
-                } else {
-                    mainPage();
-
-
-                }
-            }
-
-
-
-            super.onPostExecute(jsonObject);
-        }
-    }
-
-
-
-
-
-
-
-    private void showUpdateDialog() {
-        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("A New Update is Available");
-        builder.setPositiveButton("Update", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse
-                        ("market://details?id=project.revision.tap.retre")));
-                dialog.dismiss();
-            }
-        });
-
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                /* Create an Intent that will start the Menu-Activity. */
-
-                        Intent mainIntent = new Intent(Splash.this, MainActivity.class);
-                        Splash.this.startActivity(mainIntent);
-                        Splash.this.finish();
-
-
-                    }
-                }, 300);
-            }
-        });
-
-        builder.setCancelable(false);
-        dialog = builder.show();
-    }
+//    protected boolean isOnline() {
+//        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+//        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+//        if (netInfo != null && netInfo.isConnected()) {
+//
+//
+//            return true;
+//        }
+//
+//
+//        else {
+//            return false;
+//        }
+//    }
+//
+//
+//    private void getCurrentVersion() {
+//        PackageManager pm = this.getPackageManager();
+//        PackageInfo pInfo = null;
+//
+//        try {
+//            pInfo = pm.getPackageInfo(this.getPackageName(), 0);
+//
+//
+//
+//
+//
+//        } catch (PackageManager.NameNotFoundException e1) {
+//            // TODO Auto-generated catch block
+//            e1.printStackTrace();
+//
+//
+//
+//        }
+//        currentVersion = pInfo.versionName;
+//
+//
+//
+//
+//
+//    }
+//
+//    private class GetLatestVersion extends AsyncTask<String, String, JSONObject> {
+//
+//        private ProgressDialog progressDialog;
+//
+//        @Override
+//        protected void onPreExecute() {
+//            super.onPreExecute();
+//
+//        }
+//
+//
+//        @Override
+//        protected JSONObject doInBackground(String... params) {
+//
+//
+//
+//
+//            try {
+//
+//
+//
+//
+//
+//
+////It retrieves the latest version by scraping the content of current version from play store at runtime
+//                Document doc = Jsoup.connect("https://play.google.com/store/apps/details?id=project.revision.tap.retre").get();
+//                latestVersion = doc.getElementsByAttributeValue
+//                        ("itemprop", "softwareVersion").first().text();
+//
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//
+//
+//
+//
+//
+//
+//            }
+//
+//
+//            return new JSONObject();
+//
+//
+//
+//
+//        }
+//
+//        @Override
+//        protected void onPostExecute(JSONObject jsonObject) {
+//
+//
+//
+//            if (latestVersion != null) {
+//                if (!currentVersion.equalsIgnoreCase(latestVersion)) {
+//                    if (!isFinishing()) { //This would help to prevent Error : BinderProxy@45d459c0 is not valid; is your activity running? error
+//                        showUpdateDialog();
+//                        pBar.setVisibility(View.GONE);
+//                    }
+//                } else {
+//                    mainPage();
+//
+//
+//                }
+//            }
+//
+//
+//
+//            super.onPostExecute(jsonObject);
+//        }
+//    }
+//
+//
+//
+//    private void showUpdateDialog() {
+//        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//        builder.setTitle("A New Update is Available");
+//        builder.setPositiveButton("Update", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse
+//                        ("market://details?id=project.revision.tap.retre")));
+//                dialog.dismiss();
+//            }
+//        });
+//
+//        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//
+//                new Handler().postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                /* Create an Intent that will start the Menu-Activity. */
+//
+//                        Intent mainIntent = new Intent(Splash.this, MainActivity.class);
+//                        Splash.this.startActivity(mainIntent);
+//                        Splash.this.finish();
+//
+//
+//                    }
+//                }, 300);
+//            }
+//        });
+//
+//        builder.setCancelable(false);
+//        dialog = builder.show();
+//    }
 
 }
