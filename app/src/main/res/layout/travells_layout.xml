@@ -27,7 +27,7 @@
 
             android:theme="@style/ToolbarStyle"
             app:layout_scrollFlags="scroll|enterAlways"
-            app:title="Point of intrest"
+            app:title="Point of interest"
             app:titleTextColor="@color/white">
 
         </android.support.v7.widget.Toolbar>

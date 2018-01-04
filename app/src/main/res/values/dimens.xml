@@ -35,4 +35,6 @@
     <dimen name="landingpage_image_height">200dp</dimen>
     <dimen name="image_icon_height">160dp</dimen>
     <dimen name="margin_above_fab">100dp</dimen>
+
+    <dimen name="contact_textsize">10dp</dimen>
 </resources>

@@ -295,7 +295,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
-                                <com.example.prakash.RetreatServicedApartment.activity.RoundRectCornerImageView
+                                <com.ca.prakash.RetreatServicedApartment.activity.RoundRectCornerImageView
                                     android:id="@+id/myImageView"
                                     android:layout_width="match_parent"
 
@@ -352,7 +352,7 @@
                                 android:layout_height="match_parent">
 
 
-                                <com.example.prakash.RetreatServicedApartment.activity.RoundRectCornerImageView
+                                <com.ca.prakash.RetreatServicedApartment.activity.RoundRectCornerImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
 
@@ -402,7 +402,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
-                                <com.example.prakash.RetreatServicedApartment.activity.RoundRectCornerImageView
+                                <com.ca.prakash.RetreatServicedApartment.activity.RoundRectCornerImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
 
@@ -454,7 +454,7 @@
                                 android:layout_height="match_parent">
 
 
-                                <com.example.prakash.RetreatServicedApartment.activity.RoundRectCornerImageView
+                                <com.ca.prakash.RetreatServicedApartment.activity.RoundRectCornerImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
 
@@ -504,7 +504,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
-                                <com.example.prakash.RetreatServicedApartment.activity.RoundRectCornerImageView
+                                <com.ca.prakash.RetreatServicedApartment.activity.RoundRectCornerImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
 
@@ -553,7 +553,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
-                                <com.example.prakash.RetreatServicedApartment.activity.RoundRectCornerImageView
+                                <com.ca.prakash.RetreatServicedApartment.activity.RoundRectCornerImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
 

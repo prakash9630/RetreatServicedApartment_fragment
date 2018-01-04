@@ -34,7 +34,7 @@ android:background="@color/colorPrimary"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        tools:context="com.example.prakash.RetreatServicedApartment.activity.Location_activity" />
+        tools:context="com.ca.prakash.RetreatServicedApartment.activity.Location_activity" />
 
 
     <TextView

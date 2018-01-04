@@ -6,9 +6,6 @@
 
 
     <item android:title="YOU ARE LOGGED IN">
-        <menu>
-
-
 
 
             <item
@@ -19,7 +16,7 @@
 
 
 
-        </menu>
+
     </item>
 
     <group android:checkableBehavior="single">
@@ -36,47 +33,47 @@
             android:id="@+id/nav_home"
             android:icon="@drawable/icon_home"
             android:title="Home" />
-        <item
-            android:id="@+id/nav_apartment"
-            android:icon="@drawable/icon_apartment"
-            android:title="Apartments" />
+        <!--<item-->
+            <!--android:id="@+id/nav_apartment"-->
+            <!--android:icon="@drawable/icon_apartment"-->
+            <!--android:title="Apartments" />-->
 
-        <item
-            android:id="@+id/nav_aboutus"
-            android:icon="@drawable/icon_aboutus"
-            android:title="About us" />
-        <item
-            android:id="@+id/nav_facilities"
-            android:icon="@drawable/icon_facilities"
-            android:title="Facilities" />
-        <item
-            android:id="@+id/nav_locaiton"
-            android:icon="@drawable/icon_location"
-            android:title="Location" />
+        <!--<item-->
+            <!--android:id="@+id/nav_aboutus"-->
+            <!--android:icon="@drawable/icon_aboutus"-->
+            <!--android:title="About us" />-->
+        <!--<item-->
+            <!--android:id="@+id/nav_facilities"-->
+            <!--android:icon="@drawable/icon_facilities"-->
+            <!--android:title="Facilities" />-->
+        <!--<item-->
+            <!--android:id="@+id/nav_locaiton"-->
+            <!--android:icon="@drawable/icon_location"-->
+            <!--android:title="Location" />-->
 
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/icon_gallery"
-            android:title="Gallery" />
-        <item
-            android:id="@+id/nav_contactus"
-            android:icon="@drawable/icon_contact"
-            android:title="Contact us" />
+        <!--<item-->
+            <!--android:id="@+id/nav_gallery"-->
+            <!--android:icon="@drawable/icon_gallery"-->
+            <!--android:title="Gallery" />-->
+        <!--<item-->
+            <!--android:id="@+id/nav_contactus"-->
+            <!--android:icon="@drawable/icon_contact"-->
+            <!--android:title="Contact us" />-->
         <item
             android:id="@+id/nav_notification"
             android:icon="@drawable/icon_notification"
             android:title="Notifications" />
-        <item
-            android:id="@+id/nav_travels"
-            android:icon="@drawable/icon_travel"
-            android:title="Travells" />
+        <!--<item-->
+            <!--android:id="@+id/nav_travels"-->
+            <!--android:icon="@drawable/icon_travel"-->
+            <!--android:title="Travells" />-->
         <item
             android:id="@+id/nav_videos"
             android:icon="@drawable/icon_video"
             android:title="Videos" />
         <item
             android:id="@+id/nav_event"
-            android:icon="@drawable/icon_feedback"
+            android:icon="@drawable/events"
             android:title="Events" />
 
         <item

@@ -1,28 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.prakash.RetreatServicedApartment">
+    package="com.ca.prakash.RetreatServicedApartment">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
     <application
-        android:name=".app.MyApplication"
+        android:name="com.ca.prakash.RetreatServicedApartment.app.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/launcher"
-        android:label="RetreatServicedApartment"
+        android:label="Retreat Serviced Apartment"
         android:largeHeap="true"
         android:roundIcon="@mipmap/launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activity.MainActivity"
-            android:label="@string/app_name"
+            android:name="com.ca.prakash.RetreatServicedApartment.activity.MainActivity"
+            android:label="Retreat Serviced Apartments"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".activity.Splash"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name="com.ca.prakash.RetreatServicedApartment.activity.Splash"
+            android:theme="@style/AppTheme.NoActionBar" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,16 +33,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.Travells"
+            android:name="com.ca.prakash.RetreatServicedApartment.activity.Travells"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.prakash.RetreatServicedApartment.activity.MainActivity" />
+                android:value="com.ca.prakash.RetreatServicedApartment.activity.MainActivity" />
         </activity>
-        <activity android:name=".activity.Place_detail">
+        <activity android:name="com.ca.prakash.RetreatServicedApartment.activity.Place_detail">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.prakash.RetreatServicedApartment.activity.Travells" />
+                android:value="com.ca.prakash.RetreatServicedApartment.activity.Travells" />
         </activity>
 
         <!-- Firebase Notifications -->
@@ -70,14 +73,14 @@
 
         <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
 
-        <activity android:name=".fragment.CompletPaymet" />
-        <activity android:name=".activity.QRscanner">
+        <activity android:name="com.ca.prakash.RetreatServicedApartment.fragment.CompletPaymet" />
+        <activity android:name="com.ca.prakash.RetreatServicedApartment.activity.QRscanner">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.MainActivity" />
+                android:value="com.ca.prakash.RetreatServicedApartment.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".activity.Videos"
+            android:name="com.ca.prakash.RetreatServicedApartment.activity.Videos"
             android:configChanges="keyboardHidden|orientation|screenSize" />
 
         <receiver
@@ -92,12 +95,12 @@
             android:name="com.google.android.gms.analytics.AnalyticsService"
             android:enabled="true"
             android:exported="false" />
-        <service android:name=".Firebase.FirebaseMessagingService">
+        <service android:name="com.ca.prakash.RetreatServicedApartment.Firebase.FirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".Firebase.FirebaseInstanceIDService">
+        <service android:name="com.ca.prakash.RetreatServicedApartment.Firebase.FirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
@@ -123,14 +126,13 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value=
-                "@string/google_maps_key" />
+            android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".activity.Location_activity"
+            android:name="com.ca.prakash.RetreatServicedApartment.activity.Location_activity"
             android:label="@string/title_activity_location_activity"></activity>
 
-        <activity android:name=".activity.NewsNotification">
+        <activity android:name="com.ca.prakash.RetreatServicedApartment.activity.NewsNotification">
 
             <intent-filter>
                 <action android:name="Notification" />
@@ -140,7 +142,7 @@
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.prakash.RetreatServicedApartment.activity.MainActivity" />
+                android:value="com.ca.prakash.RetreatServicedApartment.activity.MainActivity" />
         </activity>
     </application>
 

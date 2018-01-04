@@ -5,16 +5,18 @@
     android:layout_height="wrap_content">
 
 
+
     <ImageView
         android:id="@+id/Award_image_id"
         android:padding="3dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="125dp" />
 
     <TextView
         android:textColor="@color/black"
         android:id="@+id/Award_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
 
 </LinearLayout>

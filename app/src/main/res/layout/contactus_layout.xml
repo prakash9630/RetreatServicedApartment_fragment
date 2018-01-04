@@ -27,11 +27,11 @@
 
 
                 <ImageView
-                    android:layout_width="80dp"
+                    android:layout_width="85dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
 
-                    android:src="@drawable/contact" />
+                    android:src="@drawable/retreatlogo" />
 
                 <TextView
                     android:id="@+id/place_id"
@@ -132,6 +132,8 @@
                     android:padding="8dp">
 
                     <Button
+                        android:textSize="@dimen/contact_textsize"
+
                         android:id="@+id/call_btn"
                         android:layout_width="100dp"
                         android:layout_height="60dp"
@@ -147,6 +149,7 @@
                         android:layout_marginLeft="10dp"
                         android:drawableTop="@drawable/mail"
                         android:text="Email"
+                        android:textSize="@dimen/contact_textsize"
 
                         android:textColor="#ffffff"
                         android:theme="@style/MyButton"/>
@@ -159,6 +162,7 @@
                         android:layout_marginLeft="10dp"
                         android:drawableTop="@drawable/messengericon"
                         android:text="Messenger"
+                        android:textSize="@dimen/contact_textsize"
 
                         android:textColor="#ffffff"
                         android:theme="@style/MyButton" />

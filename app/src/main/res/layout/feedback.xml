@@ -74,7 +74,18 @@
                     android:textCursorDrawable="@null"
                     android:textSize="15dp" />
 
+                <RatingBar
+                    android:id="@+id/rating_feedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
 
+                    android:layout_marginTop="5dp"
+                    android:numStars="5"
+                    android:stepSize="0.5" />
+
+              
                 <Button
                     android:id="@+id/feedback_send"
                     android:layout_width="match_parent"
